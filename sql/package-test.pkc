@@ -1,0 +1,19 @@
+create package test as
+  function price (a number, b number) return number;
+end test;
+/
+
+create package body test as
+  function price (quantity NUMBER, value NUMBER) return number is
+     error_message VARCHAR2(30) := 'Quantity cant be zero.';
+     result number;
+  begin
+     price:= value/quantity;
+     return result;
+  exception
+     when ZERO_DIVIDE then
+        DBMS_OUTPUT.put_line(error_message);
+  end price;
+
+end test;
+/
