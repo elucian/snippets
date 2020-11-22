@@ -1,0 +1,158 @@
+<head>
+  <meta charset="utf-8">
+  <meta name="description" content="Java programming free tutorial by Sage-Code.">
+  <meta name="author" content="Elucian Moise">
+  <meta name="keywords" content="language, syntax, programming, tutorial">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Website title -->
+  <title>Java Tutorial</title>  
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <!-- Icon -->
+  <link rel="icon" type="image/png"  href="../images/favicon.ico">  
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
+  <!-- Prism Highlighter -->
+  <link rel="stylesheet" href="../css/prism.css">
+  <script src="../js/prism.js"></script>
+  <!-- custom css -->
+  <link rel="stylesheet" href="..\sage.css">
+  </head>
+<body>
+
+<div class="container">
+        
+<!-- header -->
+<div class="row">
+    <div class="col">
+        <a href="https://sagecode.net"><img src="../images/sage-logo.svg" alt="Sage-Code Laboratory" height="80"/></a>
+    </div>  
+    <div class="col  bottom-right">
+        <a href="index.html#ruby-index">index</a>
+    </div>
+</div>
+    
+
+<hr>
+
+
+<h2>Java Tutorial</h2>
+
+
+<div class="alert alert-secondary shadow-sm">
+Work in progress!
+</div>
+
+
+<h2>What Are Regular Expressions?</h2>
+
+<p><em>Regular expressions</em>&nbsp;are a way to describe a set of strings based on common characteristics shared by each string in the set. They can be used to search, edit, or manipulate text and data.</p>
+
+<h2>Using Regular Expressions</h2>
+
+<pre><code class="language-java line-numbers">public class VowelsTest
+{
+ public static void main(String[] args)
+ {
+ String s1 = "banana";
+ System.out.println(s1 + " has " + Vowels.numberOfVowels(s1) + " vowels");
+ 
+ String s2 = "Veritas. Virtus. Libertas.";
+ System.out.println(s2 + " has " + Vowels.numberOfVowels(s2) + " vowels");
+ 
+ String s3 = "Veni, vidi, vici";
+ System.out.println(s3 + " has " + Vowels.numberOfVowels(s3) + " vowels");
+ }
+}</code></pre>
+<pre><code class="language-java line-numbers">public class Vowels
+{
+	public static int numberOfVowels(String sample)
+   {
+      String onlyVow = sample.replaceAll("[^AEIOUaeiou]", "");
+      //deletes everything that is not what we want
+      //replaces it with nothing, effectively deleting it
+     
+      return onlyVow.length();
+   }
+}</code></pre>
+<p>The above&nbsp;example consists of a Main method and a public class. The objective here is to count how many vowels there are in each phrase, and print it to the console.</p>
+<ul>
+<li>ReplaceAll gets rid of everything from the first set of quotes, and replaces it with what is in the second set of quotes. "" means that it is getting replaced with nothing.</li>
+<li>What exactly did you put inside replaceAll? Why does it help us count the vowels?
+<ul>
+<li>"[^AEIOUaeiou]" &ndash; This is an example of a regular expression(or regex). A regex&nbsp;is a useful tool for recognizing&nbsp;patterns in inputs. Everything that matches the pattern will be replaces in replace all.
+<ul>
+<li>[] &ndash; specifically looks for whatever character is inside the brackets. Putting in [AB] will result in every single A &amp; B being replaced.</li>
+<li>^ &ndash; is the not operator, it matches to the EXACT OPPOSITE of whats written there.</li>
+</ul>
+</li>
+<li>So I';m telling replaceAll to delete everything that isn';t a vowel and making a new word out of it that only consists of vowels.</li>
+<li>Then we just take the length of the word to get the number of vowels.</li>
+</ul>
+</li>
+</ul>
+<p>This demonstrate how to use regular expressions.</p>
+<p>&nbsp;</p>
+
+<h2>The Power of Matches and Regex</h2>
+
+<p>This article will be about using regular expressions (aka regex). I went over some of the basics of using regex in a previous post.</p>
+<p>The class bellow creates a method we implement in our main class. Our goal is to determine if there are only Digits in the sample string.</p>
+<pre><code class="language-java line-numbers">public class OnlyDigits
+{
+ public static boolean hasOnlyDigits(String sample)
+ {
+ return sample.matches("-?[0-9]*");
+ }
+}</code></pre>
+<p>Matches is a powerful method that returns either true or false based on the criteria we define in the parentheses. A programmer who knows the rough format of what he can expect can use matches to weed out bad inputs.</p>
+<p>Matches&nbsp;can cut out a lot of if/else if blocks of code.</p>
+<p>Matches only works on&nbsp;Strings.</p>
+<p>Now lets examine the symbols:</p>
+<p>[0-9]* &ndash; matches any number of digits</p>
+<p>&nbsp;</p>
+<p>-? &ndash; checks to see if there is a negative sign in the number, so that we don';t invalidate negative ints.</p>
+<p>Here is a list of examples for you to run, and see the results of the Regex</p>
+
+<h2>The Main Class</h2>
+
+<pre><code class="language-java line-numbers">public class OnlyDigitsTest
+{
+ public static void main(String[] args)
+ {
+ String s1 = "194t";
+ System.out.print(s1 + " is a valid integer? ");
+ System.out.println(OnlyDigits.hasOnlyDigits(s1));
+ 
+ String s2 = "ab33103c";
+ System.out.print(s2 + " is a valid integer? ");
+ System.out.println(OnlyDigits.hasOnlyDigits(s2));
+ 
+ String s3 = "3348yue239";
+ System.out.print(s3 + " is a valid integer? ");
+ System.out.println(OnlyDigits.hasOnlyDigits(s3));
+ 
+ String s4 = "-46231111";
+ System.out.print(s4 + " is a valid integer? ");
+ System.out.println(OnlyDigits.hasOnlyDigits(s4));
+ 
+ String s5 = "631";
+ System.out.print(s5 + " is a valid integer? ");
+ System.out.println(OnlyDigits.hasOnlyDigits(s5));
+ }
+}</code></pre>
+<p>See also:&nbsp;<a href="https://docs.oracle.com/javase/tutorial/essential/regex/">oracle documentation</a></p>
+<!-- work in progress-->
+
+<hr>
+<p><strong>Read next:</strong>
+<a href="template.html">Page Name</a></p>
+
+<!-- Footer -->
+<footer class="footer">
+  <div class="footer-copyright text-center"></div>
+</footer>
+</div>
+</body>
+</html>

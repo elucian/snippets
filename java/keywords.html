@@ -1,0 +1,126 @@
+<table class="table table-striped">
+<thead>
+<tr>
+<th width="10%">Keyword</th>
+<th width="80%">Description (Purpose)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>abstract</td>
+<td>Abstract is used to implement an abstraction in Java. A method with no definition must be declared as abstract and the class containing it must be declared as abstract. You cannot instantiate abstract classes. Abstract methods must be implemented in the sub classes. You cannot use the abstract keyword with variables or constructors.</td>
+</tr>
+<tr>
+<td >assert</td>
+<td>Assert describes a predicate (a true&ndash;false statement) placed in a Java program to indicate that the developer thinks that the predicate is always true at that place. If an assertion evaluates to false at run-time, an assertion failure results, which typically causes execution to abort. Optionally enable by ClassLoader method.</td>
+</tr>
+<tr>
+<td>boolean</td>
+<td>Defines a boolean variable for the values "true" or "false" only. By default, the value of boolean primitive type is false.</td>
+</tr>
+<tr>
+<td>byte</td>
+<td>The byte keyword is used to declare a field that can hold an 8-bit signed two';s complement integer. This keyword is also used to declare that a method returns a value of the primitive type byte.</td>
+</tr>
+<tr>
+<td>catch</td>
+<td>Used in conjunction with a try block and an optional finally block. The statements in the catch block specify what to do if a specific type of exception is thrown by the try block.</td>
+</tr>
+<tr>
+<td char="">class</td>
+<td>A type that defines the implementation of a particular kind of object. A class definition defines instance and class fields, methods, and inner classes as well as specifying the interfaces the class implements and the immediate superclass of the class. If the superclass is not explicitly specified, the superclass is implicitly Object. The class keyword can also be used in the form Class.class to get a Class object without needing an instance of that class. For example, String.class can be used instead of doing new String().getClass().</td>
+</tr>
+<tr>
+<td>default</td>
+<td>The default keyword can optionally be used in a switch statement to label a block of statements to be executed if no case matches the specified value; see switch.[8][9] Alternatively, the default keyword can also be used to declare default values in a Java annotation. From Java 8 onwards, the default keyword is also used to specify that a method in an interface provides the default implementation of a method.</td>
+</tr>
+<tr>
+<td>double</td>
+<td>The double keyword is used to declare a variable that can hold a 64-bit double precision IEEE 754 floating-point number. This keyword is also used to declare that a method returns a value of the primitive type double.</td>
+</tr>
+<tr>
+<td>enum</td>
+<td>A Java keyword used to declare an enumerated type. Enumerations extend the base class Enum.</td>
+</tr>
+<tr>
+<td >final</td>
+<td>Define an entity once that cannot be changed nor derived from later. More specifically: a final class cannot be subclassed, a final method cannot be overridden, and a final variable can occur at most once as a left-hand expression on an executed command. All methods in a final class are implicitly final.</td>
+</tr>
+<tr>
+<td>float</td>
+<td>The float keyword is used to declare a variable that can hold a 32-bit single precision IEEE 754 floating-point number. This keyword is also used to declare that a method returns a value of the primitive type float.</td>
+</tr>
+<tr>
+<td>for</td>
+<td>The for keyword is used to create a for loop, which specifies a variable initialization, a boolean expression, and an incrementation. The variable initialization is performed first, and then the boolean expression is evaluated. If the expression evaluates to true, the block of statements associated with the loop are executed, and then the incrementation is performed. The boolean expression is then evaluated again; this continues until the expression evaluates to false.<br />As of J2SE 5.0, the for keyword can also be used to create a so-called "enhanced for loop",which specifies an array or Iterable object; each iteration of the loop executes the associated block of statements using a different element in the array or Iterable.</td>
+</tr>
+<tr>
+<td>Implements</td>
+<td>Included in a class declaration to specify one or more interfaces that are implemented by the current class. A class inherits the types and abstract methods declared by the interfaces.</td>
+</tr>
+<tr>
+<td >Instanceof</td>
+<td>A binary operator that takes an object reference as its first operand and a class or interface as its second operand and produces a boolean result. The instanceof operator evaluates to true if and only if the runtime type of the object is assignment compatible with the class or interface.</td>
+</tr>
+<tr>
+<td>interface</td>
+<td>Used to declare a special type of class that only contains abstract or default methods, constant (static final) fields and static interfaces. It can later be implemented by classes that declare the interface with the implements keyword. By the help of interface we can easily achieve multiple inheritance in java. We can define one interface within another interface.</td>
+</tr>
+<tr>
+<td>native</td>
+<td>Used in method declarations to specify that the method is not implemented in the same Java source file, but rather in another language.[7]</td>
+</tr>
+<tr>
+<td >package</td>
+<td>Java package is a group of similar classes and interfaces. Packages are declared with the package keyword.</td>
+</tr>
+<tr>
+<td >protected</td>
+<td>The protected keyword is used in the declaration of a method, field, or inner class; protected members can only be accessed by members of their own class, that class';s subclasses or classes from the same package.</td>
+</tr>
+<tr>
+<td >return</td>
+<td>Used to finish the execution of a method. It can be followed by a value required by the method definition that is returned to the caller.</td>
+</tr>
+<tr>
+<td>static</td>
+<td>Used to declare a field, method, or inner class as a class field. Classes maintain one copy of class fields regardless of how many instances exist of that class. static also is used to define a method as a class method. Class methods are bound to the class instead of to a specific instance, and can only operate on class fields. (Classes and interfaces declared as static members of another class or interface are actually top-level classes and are not inner classes.)</td>
+</tr>
+<tr>
+<td>super</td>
+<td>Inheritance basically used to achieve dynamic binding or run-time polymorphism in java.Used to access members of a class inherited by the class in which it appears. Allows a subclass to access overridden methods and hidden members of its superclass. The super keyword is also used to forward a call from a constructor to a constructor in the superclass.Also used to specify a lower bound on a type parameter in Generics.</td>
+</tr>
+<tr>
+<td>synchronized</td>
+<td>Used in the declaration of a method or code block to acquire the mutex lock for an object while the current thread executes the code.[7] For static methods, the object locked is the class';s Class. Guarantees that at most one thread at a time operating on the same object executes that code. The mutex lock is automatically released when execution exits the synchronized code. Fields, classes and interfaces cannot be declared as synchronized.</td>
+</tr>
+<tr>
+<td>throw</td>
+<td>Causes the declared exception instance to be thrown. This causes execution to continue with the first enclosing exception handler declared by the catch keyword to handle an assignment compatible exception type. If no such exception handler is found in the current method, then the method returns and the process is repeated in the calling method. If no exception handler is found in any method call on the stack, then the exception is passed to the thread';s uncaught exception handler.</td>
+</tr>
+<tr>
+<td>transient</td>
+<td>Declares that an instance field is not part of the default serialized form of an object. When an object is serialized, only the values of its non-transient instance fields are included in the default serial representation. When an object is deserialized, transient fields are initialized only to their default value. If the default form is not used, e.g. when a serialPersistentFields table is declared in the class hierarchy, all transient keywords are ignored.</td>
+</tr>
+<tr>
+<td>void</td>
+<td>The void keyword is used to declare that a method does not return any value.</td>
+</tr>
+<tr>
+<td>while</td>
+<td>The while keyword is used to create a while loop, which tests a boolean expression and executes the block of statements associated with the loop if the expression evaluates to true; this continues until the expression evaluates to false. This keyword can also be used to create a do-while loop; see do.</td>
+</tr>
+<tr>
+<td>null</td>
+<td>A reference literal value.</td>
+</tr>
+<tr>
+<td><em>const ;</em></td>
+<td>Although reserved as a keyword in Java, const is not used and has no function. For defining constants in Java, see the final keyword.</td>
+</tr>
+<tr>
+<td><em>goto</em></td>
+<td>Although reserved as a keyword in Java, goto is not used and has no function.</td>
+</tr>
+</tbody>
+</table>
